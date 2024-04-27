@@ -1,0 +1,89 @@
+{
+  "columns": [
+    "obj_ID",
+    "alpha",
+    "delta",
+    "u",
+    "g",
+    "r",
+    "i",
+    "z",
+    "run_ID",
+    "cam_col",
+    "field_ID",
+    "spec_obj_ID",
+    "redshift",
+    "plate",
+    "MJD",
+    "fiber_ID"
+  ],
+  "columns_after_dummy": [
+    "obj_ID",
+    "alpha",
+    "delta",
+    "u",
+    "g",
+    "r",
+    "i",
+    "z",
+    "run_ID",
+    "cam_col",
+    "field_ID",
+    "spec_obj_ID",
+    "redshift",
+    "plate",
+    "MJD",
+    "fiber_ID"
+  ],
+  "target_col": "class",
+  "categorical_columns": [
+    "cam_col"
+  ],
+  "columns_dtypes": {
+    "obj_ID": "float64",
+    "alpha": "float64",
+    "delta": "float64",
+    "u": "float64",
+    "g": "float64",
+    "r": "float64",
+    "i": "float64",
+    "z": "float64",
+    "run_ID": "int64",
+    "cam_col": "int64",
+    "field_ID": "int64",
+    "spec_obj_ID": "float64",
+    "redshift": "float64",
+    "plate": "int64",
+    "MJD": "int64",
+    "fiber_ID": "int64"
+  },
+  "columns_dtypes_preprocess": {
+    "obj_ID": "float64",
+    "alpha": "float64",
+    "delta": "float64",
+    "u": "float64",
+    "g": "float64",
+    "r": "float64",
+    "i": "float64",
+    "z": "float64",
+    "run_ID": "int64",
+    "cam_col": "int64",
+    "field_ID": "int64",
+    "spec_obj_ID": "float64",
+    "redshift": "float64",
+    "plate": "int64",
+    "MJD": "int64",
+    "fiber_ID": "int64"
+  },
+  "categories_values_per_categorical": {
+    "cam_col": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "date": "2024/04/27-04:35:06\""
+}
