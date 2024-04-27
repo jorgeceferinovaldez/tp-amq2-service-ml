@@ -75,7 +75,7 @@ def processing_dag():
 
             mlflow.start_run(run_name='Star_class_run_' + datetime.datetime.today().strftime('%Y/%m/%d-%H:%M:%S"'),
                              experiment_id=experiment.experiment_id,
-                             tags={"experiment": "Star classification models", "dataset": "Heart disease"},
+                             tags={"experiment": "Star classification models", "dataset": "Star classification"},
                              log_system_metrics=True)
 
             params = model.get_params()

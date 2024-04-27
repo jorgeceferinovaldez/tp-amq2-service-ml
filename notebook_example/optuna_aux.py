@@ -54,8 +54,8 @@ def objective(trial, X_train, y_train, experiment_id):
 
         # Parámetros a logguear
         params = {
-            "objective": "clas:f1",
-            "eval_metric": "f1"
+            "objective": "clas:f1_macro",
+            "eval_metric": "f1_macro",
         }
 
         # Sugiere valores para los hiperparámetros utilizando el objeto trial de optuna.
@@ -108,12 +108,15 @@ def objective(trial, X_train, y_train, experiment_id):
             params["n_estimators"] = rf_n_estimators
         
         # Realizamos validación cruzada y calculamos el score F1
+        #score = cross_val_score(classifier_obj, X_train, y_train.to_numpy().ravel(), 
+        #                        n_jobs=-1, cv=5, scoring='f1')
+        
         score = cross_val_score(classifier_obj, X_train, y_train.to_numpy().ravel(), 
-                                n_jobs=-1, cv=5, scoring='f1')
+                                n_jobs=-1, cv=5, scoring='f1_macro')
         
         # Log los hiperparámetros a MLflow
         mlflow.log_params(params)
         # Y el score f1 medio de la validación cruzada.
-        mlflow.log_metric("f1", score.mean())
+        mlflow.log_metric("f1_macro", score.mean())
 
     return score.mean()
