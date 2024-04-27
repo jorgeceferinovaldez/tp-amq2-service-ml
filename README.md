@@ -30,3 +30,10 @@ entrenar el modelo, un proceso ETL, etc.
 - Documentar (comentarios y docstring en scripts, notebooks, y asegurar que la 
 documentación de FastAPI esté de acuerdo al modelo).
 
+# Instrucciones
+
+En la carpeta raíz de este repositorio, ejecuta:
+
+```bash
+docker compose --profile all up
+```
