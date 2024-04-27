@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.feature_selection import mutual_info_classif
 
 
-def plot_correlation_with_target(X, y, target_col="num", save_path=None):
+def plot_correlation_with_target(X, y, target_col="class", save_path=None):
     """
     Plots the correlation of each variable in the dataframe with the target column.
 
