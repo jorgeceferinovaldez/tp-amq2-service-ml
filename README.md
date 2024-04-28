@@ -36,11 +36,16 @@ docker-compose --profile all up
 
 2. Probar el correcto despliegue de los servicios:
 
-- Apache Airflow: http://localhost:8080
-- MLflow: http://localhost:5000
-- MinIO: http://localhost:9001
-- API: http://localhost:8800/
-- Documentación de la API: http://localhost:8800/docs. Aquí podrás ver la descripción de las variables de entrada si tienes dudas para usar la API.
+- **Apache Airflow**: Herramienta para programar, monitorear y administrar flujos de trabajo de datos.
+  - URL: http://localhost:8080
+- **MLflow**: Plataforma de código abierto para gestionar el ciclo de vida completo del aprendizaje automático.
+  - URL: http://localhost:5000
+- **MinIO**: Servidor de almacenamiento de objetos de alto rendimiento y distribuido.
+  - URL: http://localhost:9001
+- **API**: Endpoint de la API que sirve el modelo y realiza predicciones sobre datos nuevos.
+  - URL: http://localhost:8800/
+- **Documentación de la API**: Documentación interactiva de la API, donde puedes ver la descripción de las variables de entrada si tienes dudas para usar la API.
+  - URL: http://localhost:8800/docs
 
 # Ejecución
 
