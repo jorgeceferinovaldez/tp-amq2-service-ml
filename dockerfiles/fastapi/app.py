@@ -47,7 +47,7 @@ def load_model(model_name: str, alias: str):
         # Load information of the ETL pipeline from S3
         s3 = boto3.client('s3')
 
-        s3.head_object(Bucket='data', Key='data_info/data.json')
+        s3.head_object(Bucket='data', Key='data_info/data_star.json')
         result_s3 = s3.get_object(Bucket='data', Key='data_info/data_star.json')
         text_s3 = result_s3["Body"].read().decode()
         data_dictionary = json.loads(text_s3)
@@ -56,7 +56,7 @@ def load_model(model_name: str, alias: str):
         #data_dictionary["standard_scaler_std"] = np.array(data_dictionary["standard_scaler_std"])
     except:
         # If data dictionary is not found in S3, load it from local file
-        file_s3 = open('/app/files/data.json', 'r')
+        file_s3 = open('/app/files/data_star.json', 'r')
         data_dictionary = json.load(file_s3)
         file_s3.close()
 
